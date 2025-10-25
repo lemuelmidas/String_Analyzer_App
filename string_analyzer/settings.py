@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-t8&rtko0zreyj^46@+$^5uy%@mrb!2y08^o0y5_^mr@d%*&a@o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
-
+ALLOWED_HOSTS = ['stringanalyzerapp-production.up.railway.app', 'localhost', '127.0.0.1']
 
 # Application definition
 
