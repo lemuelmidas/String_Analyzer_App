@@ -2,12 +2,12 @@ import hashlib
 from collections import Counter
 
 def analyze_string(text):
-    text_clean = text.strip()
+    clean_text = text.strip()
     return {
-        "length": len(text_clean),
-        "is_palindrome": text_clean.lower() == text_clean[::-1].lower(),
-        "unique_characters": len(set(text_clean)),
-        "word_count": len(text_clean.split()),
-        "sha256_hash": hashlib.sha256(text_clean.encode()).hexdigest(),
-        "character_frequency_map": dict(Counter(text_clean))
+        'length': len(clean_text),
+        'is_palindrome': clean_text.lower() == clean_text[::-1].lower(),
+        'unique_characters': len(set(clean_text)),
+        'word_count': len(clean_text.split()),
+        'sha256_hash': hashlib.sha256(clean_text.encode()).hexdigest(),
+        'character_frequency_map': dict(Counter(clean_text))
     }

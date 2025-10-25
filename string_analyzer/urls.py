@@ -3,5 +3,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('analyzer.urls')),  # 👈 Include app routes directly at root
+    path('api/', include('analyzer.urls')),  # <-- include your analyzer app routes
 ]
