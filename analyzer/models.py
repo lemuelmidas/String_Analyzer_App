@@ -1,7 +1,8 @@
+# analyzer/models.py
 from django.db import models
 
 class AnalyzedString(models.Model):
-    text = models.TextField()
+    text = models.CharField(max_length=255, unique=True)
     length = models.IntegerField()
     is_palindrome = models.BooleanField()
     unique_characters = models.IntegerField()
@@ -10,4 +11,4 @@ class AnalyzedString(models.Model):
     character_frequency_map = models.JSONField()
 
     def __str__(self):
-        return self.text[:50]
+        return self.text
